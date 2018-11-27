@@ -1,0 +1,39 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E5B117C6-EC79-4637-B63A-84D4F631ED47}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
+  <PropertyGroup>
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="cDirectX.cpp" />
+    <ClCompile Include="cDrawings.cpp" />
+    <ClCompile Include="cMain.cpp" />
+    <ClCompile Include="ProcMem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FindPattern.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="hDirectX.h" />
+    <ClInclude Include="hDrawings.h" />
+    <ClInclude Include="hMain.h" />
+    <ClInclude Include="Offsets.h" />
+    <ClInclude Include="ProcMem.h" />
+    <ClInclude Include="Vector.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Targets" />
+</Project>
